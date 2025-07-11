@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to BMI Insight</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to BMI Insight</h1>
+    <form method="post">
+  <label for="weight">Weight (kg):</label>
+  <input type="number" name="weight" step="0.1" required value="{{ request.form.weight or '' }}">
+
+  <label for="height">Height (cm):</label>
+  <input type="number" name="height" step="0.1" required value="{{ request.form.height or '' }}">
+
+  <button type="submit">Calculate</button>
+</form>
+
+
+    {% if bmi %}
+    <div class="result">
+      <p>Your BMI is: <strong>{{ '%.2f' | format(bmi) }}</strong></p>
+      <p>Category: <strong>{{ category }}</strong></p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
