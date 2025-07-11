@@ -17,7 +17,8 @@ It takes user input for height and weight, calculates the BMI, and classifies it
 ## 📸 Screenshots
 
 > *(You can upload a screenshot of your app here and link it like below)*  
-> ![App Screenshot](static/screenshot.png)
+> ![App screenshot](assets/screenshot.png)
+
 
 ---
 
